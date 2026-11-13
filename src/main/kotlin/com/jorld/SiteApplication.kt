@@ -1,4 +1,4 @@
-package com.jorld.site
+package com.jorld
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
