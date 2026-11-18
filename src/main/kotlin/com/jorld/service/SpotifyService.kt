@@ -15,8 +15,7 @@ import java.nio.charset.Charset
 
 @Service
 class SpotifyService(
-    @Value("\${spotify.accessToken}")
-    private val spotifyAccessToken: String,
+    private val spotifyTokenService: SpotifyTokenService,
 ) {
     val client = HttpClient.newBuilder().build()
     /*
@@ -40,9 +39,11 @@ class SpotifyService(
     private val restClient = RestClient.create("https://api.spotify.com")
 
     fun getPlaylistItems(playlistId: String): JsonNode {
+	val accessToken = spotifyTokenService.getAccessToken()
+
         return restClient.get()
             .uri("/v1/playlists/{playlistId}/items", playlistId)
-            .header("Authorization", "Bearer $spotifyAccessToken")
+            .header("Authorization", "Bearer $accessToken")
             .retrieve()
             .body(JsonNode::class.java)
             ?: throw RuntimeException("Could not retrieve playlist")
