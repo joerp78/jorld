@@ -1,0 +1,34 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-16T04:15:58.142Z  INFO 13415 --- [site] [           main] com.jorld.SiteApplicationKt              : Starting SiteApplicationKt v0.0.1-SNAPSHOT using Java 21.0.13 with PID 13415 (/root/spring-apps/jorld/build/libs/site-0.0.1-SNAPSHOT.jar started by root in /root/spring-apps/jorld)
+2026-11-16T04:15:58.151Z  INFO 13415 --- [site] [           main] com.jorld.SiteApplicationKt              : No active profile set, falling back to 1 default profile: "default"
+2026-11-16T04:15:59.668Z  INFO 13415 --- [site] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-11-16T04:15:59.696Z  INFO 13415 --- [site] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-16T04:15:59.697Z  INFO 13415 --- [site] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-16T04:15:59.847Z  INFO 13415 --- [site] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1566 ms
+2026-11-16T04:16:01.471Z  WARN 13415 --- [site] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-11-16T04:16:01.514Z  INFO 13415 --- [site] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-11-16T04:16:01.556Z ERROR 13415 --- [site] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+

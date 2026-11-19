@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jorld</title>
+</head>
+<body>
+
+    <header>
+        <h1>Jodio - Week 1</h1>
+        <a href="https://open.spotify.com/playlist/5lcqvWNgzb2DKDAzkKidqA"
+           target="_blank"
+           rel="noopener noreferrer">
+            Listen to Jodio on Spotify
+        </a>
+    </header>
+
+    <main>
+        <div th:each="entry : ${playlist.get('items')}">
+            <div th:with="track=${entry.get('item')}">
+                <p>
+                    <strong th:text="${track.get('name').asText()}"></strong>
+                    <span> - </span>
+                    <span th:each="artist : ${track.get('artists')}"
+                          th:text="${artist.get('name').asText() + ' '}">
+                    </span>
+                </p>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
+
